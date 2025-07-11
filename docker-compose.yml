@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  fastapi:
+    image: lared_microservice_image:latest
+    ports:
+      - 8002:8001
+    environment:
+      - OPENAI_API_KEY= $OPENAI_API_KEY
+      - ENV=dev
+      - APP_NAME=vector-beta
+      - POSTGRES_URL= $POSTGRES_URL
+      - POSTGRES_PASSWORD= $POSTGRES_PASSWORD
+      - POSTGRES_PORT= $POSTGRES_PORT
+      - POSTGRES_USER= $POSTGRES_USER
+      - POSTGRES_DB= $POSTGRES_DB
+    networks:
+      - general_network
+
+networks:
+  general_network:
+    external: true
