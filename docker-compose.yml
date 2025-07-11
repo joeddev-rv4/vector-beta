@@ -5,7 +5,7 @@ services:
     image: lared_microservice_v1:latest
     container_name: la_red_microservice
     ports:
-      - 8002:8001
+      - 8001:8001
     environment:
       - OPENAI_API_KEY= $OPENAI_API_KEY
       - ENV=dev
