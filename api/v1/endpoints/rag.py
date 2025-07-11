@@ -22,7 +22,7 @@ async def rag_proc(
         result = await start_rag_proc(payload.message, db)
         return result
     except Exception as e:
-        logger.error("====XXXX====>    Error para procesar data Error: " + e)
+        logger.error("====XXXX====>    Error para procesar data Error: " + str(e))
         return JSONResponse(
             status_code=400,
             content={"success": False, "error": str(e)}
