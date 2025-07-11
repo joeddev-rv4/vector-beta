@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   fastapi:
-    image: lared_microservice_image:latest
+    image: lared_microservice:latest
     container_name: la_red_microservice
     ports:
       - 8002:8001
