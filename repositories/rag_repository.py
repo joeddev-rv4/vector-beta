@@ -22,4 +22,4 @@ async def get_embedding_data(db, embedding: list[float]):
         return [FAQResponse(**row) for row in rows]
     except Exception as e:
         logger.error("====XXXX====>    Error para procesar data CONSULTA POSTGRES Error: " + str(e))
-        return e
+        return {"Error para consulta Postgres"}
